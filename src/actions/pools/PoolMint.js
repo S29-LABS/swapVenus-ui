@@ -14,18 +14,12 @@ async function PoolMint() {
         const config = await prepareWriteContract({
           address: CONTRACT_ADDRESS,
           abi: CONTRACT_ABI,
-          functionName: 'mint',
-          args: [],
+          functionName: 'transferFrom',
+          args: ["0x2E0c954f186DC9ceDa9110dE30C9A83c77DA7E6a","0x84E4385EfEa4990A436b42E89D1a1a1BCFb3E018",1],
         })
 
         await writeContract(config)
 
-        
-
-        
-  
-
-     
 }
 
 export default PoolMint;
